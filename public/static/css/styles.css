@@ -1,0 +1,452 @@
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-size: 1.2rem;
+}
+
+/* Estilos de la barra de navegación */
+nav {
+    position: fixed; /* Fija la barra en la parte superior */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(188, 12, 12, 0.8); /* Color translúcido */
+    height: 70px; /* Ajusta la altura */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    justify-content: space-between; /* Espaciado entre logo y menú */
+    z-index: 1000; /* Asegura que esté encima de otros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Agrega un pequeño sombreado */
+}
+
+/* Estilo del logo */
+nav .logo img {
+    padding-left: 20px;
+    height: 50px; /* Ajusta la altura del logo */
+    object-fit: contain; /* Asegura que el logo mantenga su proporción */
+}
+
+/* Estilos para el contenedor de la lista */
+nav ul {
+    display: flex;
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    justify-content: center; /* Centra los elementos horizontalmente */
+}
+
+/* Estilos para los elementos de la lista */
+nav ul li {
+    margin: 0 15px; /* Espaciado entre elementos */
+}
+
+/* Estilos para los enlaces */
+nav ul li a {
+    text-decoration: none; /* Quita el subrayado */
+    color: white; /* Color del texto */
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    transition: color 0.3s; /* Transición suave en hover */
+}
+
+/* Cambia el color al pasar el ratón */
+nav ul li a:hover {
+    color: #ffd700; /* Un tono dorado para destacar */
+}
+
+/* Icono de menú (hamburguesa) */
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu-icon span {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    transition: transform 0.3s;
+}
+
+header.hero {
+    background: url('../images/Factory1.png') no-repeat center center/cover;
+    background-color: #322E2E;
+    background-blend-mode: overlay;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;   
+}
+
+.hero-content .btn {
+    background: #0F0827;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+section {
+    text-align: center;
+}
+
+.sobre-nosotros-contenido{
+    background: url('../images/Factory2.png') no-repeat center center/cover;
+    background-color: #322E2E;
+    background-blend-mode: overlay;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.sobre-nosotros-contenido ul { 
+    display: inline-block;
+    list-style: none; 
+}
+
+/* Estilos para la sección de clientes */
+#clientes {
+    background-color: white; /* Fondo claro */
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.nuestros-clientes h2 {
+    font-size: 24px;
+    color: #0F0827; /* Azul oscuro */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los logos se acomoden en varias filas si es necesario */
+    justify-content: center;
+    gap: 20px; /* Espaciado entre logos */
+}
+
+.cliente {
+    text-align: center;
+    max-width: 150px;
+    margin: 0 10px;
+}
+
+.cliente img {
+    width: 100%; /* Ajusta el logo al tamaño del contenedor */
+    max-width: 150px;
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 10px; /* Espaciado entre el logo y el texto */
+}
+
+.cliente p {
+    font-size: 14px;
+    color: #333;
+    margin: 0;
+}
+
+
+
+/* Estilo de la sección para centrar contenido */
+.contacto {
+    padding: 20px;
+    display: flex; /* Activar Flexbox */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    min-height: 100vh; /* Asegurar altura completa de la pantalla */
+    background: url('../images/Factory3.png') no-repeat center center/cover;
+    background-color: #322E2E;
+    background-blend-mode: overlay;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 5px;
+}
+
+form label {
+    display: block;
+    text-align: left; /* Alinear etiquetas al inicio */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background: #0F0827;
+    color: white;
+    border: none;
+}
+
+.form-contacto {
+    width: 100%;
+    max-width: 500px; /* Limitar el ancho del formulario */
+    background-color: white; /* Fondo blanco para el formulario */
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Agregar sombra */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+.carousel-container {
+    width: 90%;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 300%; /* Cada slide ocupa 100% del ancho */
+}
+
+.carousel-slide {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.carousel-text,
+.carousel-image {
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.carousel-text h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #0F0827;
+}
+
+.carousel-text p {
+    font-size: 17px;
+    color: #333;
+    text-align: left;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botones del carrusel */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #0F0827;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Indicadores */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #0F0827;
+}
+/* Footer general */
+.footer {
+    background-color: rgba(188, 12, 12, 0.8); /* Color de fondo translúcido */
+    color: white; /* Texto en blanco */
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+    gap: 20px;
+}
+
+/* Columnas del footer */
+.footer-column {
+    flex: 1; /* Cada columna ocupa el mismo espacio */
+    text-align: center;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+    color: #FFD700; /* Cambia el color al pasar el cursor */
+}
+
+/* Logo en la columna central */
+.footer-column.logo img {
+    max-width: 150px;
+    height: auto;
+}
+/* Estilo del modal */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Flota sobre la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    overflow-y: auto; /* Permite scroll si el contenido excede la ventana */
+}
+
+/* Contenido del modal */
+.modal-contenido {
+    background-color: white;
+    margin: 5% auto; /* Centra el modal vertical y horizontalmente */
+    padding: 0; /* Sin padding interno */
+    width: 90%; /* Ajusta el ancho del modal */
+    max-width: 900px; /* Ancho máximo */
+    height: 550px;
+    max-height: 90vh; /* Altura máxima relativa a la ventana */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden; /* Oculta contenido que exceda los bordes */
+    position: relative;
+}
+
+/* Estilo del iframe */
+.modal-contenido iframe {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa todo el alto del contenedor */
+    border: none; /* Sin borde */
+}
+
+/* Botón para cerrar */
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.cerrar:hover {
+    color: #000;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+
+    /* Esconde el menú completo y muestra el ícono */
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: rgba(188, 12, 12, 0.95);
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    /* Activa el menú al hacer clic */
+    nav ul.active {
+        display: flex;
+    }
+
+    .logos {
+        gap: 10px;
+    }
+    .cliente img {
+        max-width: 100px;
+    }
+
+    .footer-container {
+        flex-direction: column; /* Las columnas se apilan en pantallas pequeñas */
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
