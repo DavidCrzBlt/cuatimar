@@ -1,9 +1,26 @@
-RewriteBase /
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html
+# Habilitar acceso a la carpeta .well-known para validación SSL
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^\.well-known/ - [L]
+</IfModule>
 
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.php -f
-RewriteRule ^(.*)$ $1.php
+# Redirigir todo el tráfico HTTP a HTTPS (si tienes el certificado SSL activo)
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTPS} !=on
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Opcional: Manejar páginas de error personalizadas
+ErrorDocument 404 /404.html
+ErrorDocument 500 /500.html
+
+# Habilitar compresión (para mejorar rendimiento)
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript
+</IfModule>
+
+# Evitar listar directorios si no hay un archivo index.html
+Options -Indexes
+
+# Establecer la página de inicio predeterminada
+DirectoryIndex index.html index.htm
