@@ -441,6 +441,60 @@ form button {
         max-width: 100px;
     }
 
+    .carousel {
+        transform: none;
+    }
+
+    .carousel-container {
+        overflow-x: hidden;
+        padding: 0;
+    }
+
+    .carousel-slide {
+        display: flex;
+        flex-direction: column; /* Alinea los elementos en columna */
+        align-items: center; /* Centra horizontalmente */
+        justify-content: center; /* Centra verticalmente */
+        text-align: center; /* Centra el texto */
+        box-sizing: border-box;
+    }    
+
+    .carousel-text {
+        order: 2; /* El texto debajo de la imagen */
+        text-align: center; /* Centra el texto */
+        padding: 10px 15px; /* Espaciado interno */
+        margin: 0 auto; /* Centra dentro del contenedor */
+        width: 80%; /* Ancho adecuado para texto */
+        box-sizing: border-box; /* Asegura que padding y borde estén incluidos */
+    }
+    
+    .carousel-image {
+        order: 1; /* Imagen primero */
+        width: 80%; /* Asegura que no se desborde */
+        margin: 0 auto; /* Centra la imagen */
+    }    
+
+    .carousel-text h2 {
+        font-size: 20px; /* Ajusta el tamaño del texto */
+    }
+
+    .carousel-text p {
+        font-size: 15px; /* Ajusta el tamaño del párrafo */
+    }
+
+    .carousel-btn {
+        padding: 8px 12px; /* Botones más pequeños */
+    }
+
+    .carousel-indicators {
+        bottom: 10px; /* Ajusta la posición de los indicadores */
+    }
+
+    .dot {
+        height: 8px;
+        width: 8px; /* Dots más pequeños */
+    }
+
     .footer-container {
         flex-direction: column; /* Las columnas se apilan en pantallas pequeñas */
         text-align: center;
@@ -448,5 +502,28 @@ form button {
 
     .footer-column {
         margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 525px) {
+    .carousel-slide {
+        display: flex;
+        flex-direction: column; /* Mantiene la imagen arriba y el texto abajo */
+        align-items: center; /* Centra todo horizontalmente */
+        justify-content: center; /* Alinea verticalmente */
+        text-align: center; /* Centra el texto */
+    }
+
+    .carousel-text {
+        width: 50%; /* Aumenta el ancho del texto para mejor legibilidad */
+        font-size: 14px; /* Reduce ligeramente el tamaño del texto */
+        padding: 8px 10px; /* Ajusta los márgenes */
+    }
+
+    .carousel-image {
+        width: 90%; /* Reduce el tamaño de la imagen */
+        max-width: 300px; /* Establece un tamaño máximo */
+        height: auto; /* Mantiene la proporción de la imagen */
+        margin-bottom: 10px; /* Añade un espacio entre la imagen y el texto */
     }
 }
